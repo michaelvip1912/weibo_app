@@ -34,6 +34,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.13.2'
+  gem 'guard-rspec' ,'3.1.0'
+
 end
 
 group :test do
@@ -44,6 +46,8 @@ end
 group :production do
   gem 'pg', '0.15.1'
 end
+
+  gem 'bootstrap-sass','2.3.1.3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

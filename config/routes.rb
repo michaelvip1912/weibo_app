@@ -1,4 +1,7 @@
 WeiboApp::Application.routes.draw do
+  resources :test_scaffolds
+
+  resources :users
   get "users/new"
   get "static_pages/home"
   get "static_pages/help"

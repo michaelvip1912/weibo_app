@@ -1,4 +1,5 @@
 WeiboApp::Application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
   resources :test_scaffolds
 
   resources :users

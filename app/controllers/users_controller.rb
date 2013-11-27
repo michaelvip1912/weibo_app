@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
@@ -28,6 +29,11 @@ class UsersController < ApplicationController
       format.html { redirect_to user_url }
       format.json { head :no_content }
     end
+  end
+
+  def destroy
+    sign_out
+    redirect_to root_path
   end
 
   private
